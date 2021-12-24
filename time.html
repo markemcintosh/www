@@ -1,0 +1,198 @@
+
+
+<!doctype html>
+
+
+<html class="no-js" lang="en-US">
+
+
+<head id="Canary Yellow" data-template-set="virgilabloh-Theme">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    
+
+	<meta charset="UTF-8">
+
+	
+	<title>Mark McIntosh™</title>
+
+	<meta name="title" content="Virgil Abloh™">
+
+	<!--Google will often use this as its description of your page/site. Make it good.-->
+	<meta name="description" content="" />
+
+	
+	<meta name="Copyright" content="Copyright &copy; Virgil Abloh™ 2021. All Rights Reserved.">
+
+
+	
+	<link rel="stylesheet" href="./timestyle.css" />
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js?ver=5.2.4'></script>
+
+
+    
+</head>
+
+<body class="home page-template-default page page-id-5">
+    
+
+    
+
+    
+    <script>
+
+        
+        $(document).ready(function(){
+            displayTime();
+            setInterval(displayTime, 1000);
+            
+            var zip, country, locIP, latIP, lonIP = '';
+            
+            /* https://ipinfo.io/json?token=62f16ef67528e4 */
+
+            $.get("https://ipinfo.io/json", function (response) {
+                $("#ip").html("IP: " + response.ip);
+                locIP = (response.loc).split(",");
+                latIP = locIP[0];
+                lonIP = locIP[1];
+                if(response.city != ''){
+                    $("#address").html(response.city + ", " + response.region);
+                    $("#details").html(JSON.stringify(response, null, 4));
+                }
+                console.log('city ' + response.city);
+                
+            }, "jsonp");
+
+                $('.trigger-settings').click(function() {
+                    if(!$('.lity-opened').length){
+                        var outerModal = $('#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-modal-right-content').outerHeight() - 100;
+                        $('html').css('height', outerModal);
+                        $('body').css('height', outerModal);
+
+                        $('div#moove_gdpr_cookie_info_bar').css('visibility', 'hidden');
+    //                    console.log(outerModal + 'log');
+                    }
+                });
+
+                        
+        })
+        
+        /* time */
+        function displayTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            if(hours < 10) {
+                hours = "0" + hours;
+            }
+            if(minutes < 10) {
+                minutes = "0" + minutes;
+            }        
+            if(seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            var clockDiv = document.getElementById('live-clock');
+
+            clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
+        }
+
+
+    </script>
+    
+
+        
+<script>
+    $(document).ready(function(){
+        
+        $('footer').css('background-color', '#fff');
+        $('footer').css('z-index', '100');
+        
+
+        $('.main-content').css('visibility', 'visible');
+            
+        
+        
+        if($(window).width() >= 900){
+        
+            setTimeout(function(){
+                heightToggle();
+            },200)
+            setTimeout(function(){
+                heightToggle();
+            },1000)
+            setTimeout(function(){
+                heightToggle();
+                var wrapper = $('#all-projects-wrapper').height();
+                $('.legal-link').css('margin-top', wrapper+15-$('.column-3').height());
+            },3000)
+
+
+
+            setTimeout(function(){
+                $('.home .inner-content iframe').each(function( index ) {
+                    if(!$(this).hasClass('square-iframe')){
+                        $(this).css('height', $(this).width()/16*9);
+                    }
+                });
+
+                $('.p-2070 iframe').css('width', '9vw');
+                $('.p-2070 iframe').css('height', '16vw');
+            }, 400)
+
+            setTimeout(function(){
+                $('.p-2070 iframe').css('width', '9vw');
+                $('.p-2070 iframe').css('height', '16vw');
+            }, 2000)
+
+        
+        }else{
+        
+            setTimeout(function(){
+                setIframe();
+
+                
+            }, 400)
+
+            setTimeout(function(){
+                $('.p-2070 iframe').css('width', '38vw');
+                $('.p-2070 iframe').css('height', '67vw');
+            }, 2000)
+        
+        }/* winwidth */
+        
+    })
+    
+
+</script>
+
+
+        <div id="lightbox-img" style="display:none;" onclick="collapseImage()"><div class="lightbox-inner"></div></div>
+
+		<div id="main-container">
+            
+            <div class="main-content">
+                
+ 
+                    <div id="weather">
+                        Current Local Time <span id="live-clock"></span><br>
+                        <br>
+                        <span id="address"></span><br>
+                        <span class="temperatura"></span> <img src="" />
+                
+                    </div>
+
+
+                
+                
+
+
+</body>
+
+</html>
+

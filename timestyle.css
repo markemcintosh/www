@@ -1,0 +1,33 @@
+
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font-family: 'Helvetica';}
+
+
+/************************ WEATHER */
+#weather{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: right;
+    font-size: 1.4vw;
+    line-height: 1.4vw;
+}
+
+#weather img{
+    height: 1.5vw;
+    vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

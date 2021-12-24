@@ -1,60 +1,226 @@
 <html>
   <head>
-    <title>ConstitutionDAO</title>
+    <title>Mark McIntosh's Page</title>
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>"
+      href="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
     />
-    <script defer="true" src="assets/scripts/tilt.js"></script>
-    <script defer="true" src="assets/scripts/progress.js"></script>
+ 
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://constitutiondao.com/assets/images/preview-banner.jpg?utm_source=twitter"
+      content="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
     />
-    <meta name="twitter:title" content="ConstitutionDAO" />
+    <meta name="twitter:title" content="Mark McIntosh" />
     <meta
       name="twitter:description"
-      content="what if we held hands and bought the constitution together?"
+      content="This is a page for Mark McIntosh, Ex-McKinsey, Harvard College, Harvard Law School guy"
     />
 
-    <meta property="og:title" content="ConstitutionDAO" />
+    <meta property="og:title" content="Mark McIntosh" />
     <meta
       property="og:description"
-      content="what if we held hands and bought the constitution together?"
+      content="This is a page for Mark McIntosh, Ex-McKinsey, Harvard College, Harvard Law School guy"
     />
     <meta
       property="og:image"
-      content="https://constitutiondao.com/assets/images/preview-banner.jpg?utm_source=twitter"
+      content="This is a page for Mark McIntosh, Ex-McKinsey, Harvard College, Harvard Law School guy"
     />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-NFTGPTJK0T"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VKLZ07J11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag("config", "G-NFTGPTJK0T");
-    </script>
+  gtag('config', 'G-8VKLZ07J11');
+</script>
   </head>
   <body>
+    <link rel="stylesheet" href="./timestyle.css" />
+
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js?ver=5.2.4'></script>
+    
+    
+        
+    </head>
+    
+    <body class="home page-template-default page page-id-5">
+        
+    
+        
+    
+        
+        <script>
+    
+            
+            $(document).ready(function(){
+                displayTime();
+                setInterval(displayTime, 1000);
+                
+                var zip, country, locIP, latIP, lonIP = '';
+                
+                /* https://ipinfo.io/json?token=62f16ef67528e4 */
+    
+                $.get("https://ipinfo.io/json", function (response) {
+                    $("#ip").html("IP: " + response.ip);
+                    locIP = (response.loc).split(",");
+                    latIP = locIP[0];
+                    lonIP = locIP[1];
+                    if(response.city != ''){
+                        $("#address").html(response.city + ", " + response.region);
+                        $("#details").html(JSON.stringify(response, null, 4));
+                    }
+                    console.log('city ' + response.city);
+                    
+                }, "jsonp");
+    
+                    $('.trigger-settings').click(function() {
+                        if(!$('.lity-opened').length){
+                            var outerModal = $('#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-modal-right-content').outerHeight() - 100;
+                            $('html').css('height', outerModal);
+                            $('body').css('height', outerModal);
+    
+                            $('div#moove_gdpr_cookie_info_bar').css('visibility', 'hidden');
+        //                    console.log(outerModal + 'log');
+                        }
+                    });
+    
+                            
+            })
+            
+            /* time */
+            function displayTime() {
+                var currentTime = new Date();
+                var hours = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+                var seconds = currentTime.getSeconds();
+    
+                if(hours < 10) {
+                    hours = "0" + hours;
+                }
+                if(minutes < 10) {
+                    minutes = "0" + minutes;
+                }        
+                if(seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+    
+                var clockDiv = document.getElementById('live-clock');
+    
+                clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
+            }
+    
+    
+        </script>
+        
+    
+            
+    <script>
+        $(document).ready(function(){
+            
+            $('footer').css('background-color', '#fff');
+            $('footer').css('z-index', '100');
+            
+    
+            $('.main-content').css('visibility', 'visible');
+                
+            
+            
+            if($(window).width() >= 900){
+            
+                setTimeout(function(){
+                    heightToggle();
+                },200)
+                setTimeout(function(){
+                    heightToggle();
+                },1000)
+                setTimeout(function(){
+                    heightToggle();
+                    var wrapper = $('#all-projects-wrapper').height();
+                    $('.legal-link').css('margin-top', wrapper+15-$('.column-3').height());
+                },3000)
+    
+    
+    
+                setTimeout(function(){
+                    $('.home .inner-content iframe').each(function( index ) {
+                        if(!$(this).hasClass('square-iframe')){
+                            $(this).css('height', $(this).width()/16*9);
+                        }
+                    });
+    
+                    $('.p-2070 iframe').css('width', '9vw');
+                    $('.p-2070 iframe').css('height', '16vw');
+                }, 400)
+    
+                setTimeout(function(){
+                    $('.p-2070 iframe').css('width', '9vw');
+                    $('.p-2070 iframe').css('height', '16vw');
+                }, 2000)
+    
+            
+            }else{
+            
+                setTimeout(function(){
+                    setIframe();
+    
+                    
+                }, 400)
+    
+                setTimeout(function(){
+                    $('.p-2070 iframe').css('width', '38vw');
+                    $('.p-2070 iframe').css('height', '67vw');
+                }, 2000)
+            
+            }/* winwidth */
+            
+        })
+        
+    
+    </script>
+    
+    
+            <div id="lightbox-img" style="display:none;" onclick="collapseImage()"><div class="lightbox-inner"></div></div>
+    
+        <div id="main-container">
+                
+                <div class="main-content">
+                    
+     
+                        <div id="weather">
+                            Current Local Time <span id="live-clock"></span><br>
+                            <br>
+                           
+                            <span class="temperatura">
+                    
+                        </div>
+    
+    
+                    
+                    
+    
+    
+    </body>
+    
+    </html>
+    
+
+
     <div class="center">
       <div class="title">
-        We're buying the constitution and it will be governed by the people.
+        If Mark McIntosh had a webpage, this is what it would look like.
       </div>
 
-      <p class="scroll-scroll">(📜, 📜)</p>
+      <h1 >Mark McIntosh</h1>
 
-      <h1 class="percent" id="percent">brb buying the Constitution 🤪</h1>
+      <h1 class="percent" id="percent">Scroll down to learn more</h1>
       <br>
-      <b>Check the live stream of the auction <a href="https://www.youtube.com/watch?v=1TBa-9Lx3vc">on Youtube</a> at 6PM ET.</b>
+      <b> <a href="mailto: mark@markmcintosh.com">Click here to send me an email</a> </b>
       <br>
 
       <div class="links">
@@ -63,735 +229,285 @@
             class="cta-link"
             target="_blank"
             rel="noreferrer"
-            href="https://twitter.com/constitutiondao"
-            >Follow us</a
+            href="https://twitter.com/markmcintosh01"
+            >Follow me on Twitter</a
           >
           <a
             class="cta-link"
             target="_blank"
             rel="noreferrer"
-            href="https://discord.gg/p2jdESeVfy"
-            >Join our Discord</a
+            href="https://discord.gg/bwU4jb3YTt"
+            >Join my Discord</a
           >
         </div>
       </div>
     </div>
 
     <div class="faq">
-      <h1>Frequently asked questions</h1>
+      <h1>Who am I?</h1>
 
       <div class="faq-grid">
         <div>
-          <h2>So, what's going on?</h2>
-          We’re buying the US Constitution.<br /><br />
-          For the first time in thirty-three years,
-          <a
-            href="https://www.reuters.com/lifestyle/sothebys-auction-rare-first-printing-us-constitution-2021-09-17/"
-            >one of thirteen surviving copies of the Official Edition from the
-            Constitutional Convention will be publicly auctioned by
-            Sotheby's.</a
-          >
-          It is one of the two copies that are still owned by private
-          collectors. The proceeds from the auction will be given to a charity
-          that has been established by the current owner. <br /><br />
-          <b
-            >ConstitutionDAO is a
-            <a
-              href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization"
-              >DAO</a
-            ></b
-          >
-          that is pooling together money to win this auction. We intend to put
-          The Constitution in the hands of The People.
+          <h2>I am an Operating Partner/Investor</h2>
+          My main work is raising debt and equity for Portfolio companies, supporting their M&A activity, marketing, and operations. I sit on four company boards, and am Chairman of a Pension fund and of its investment committee<br /><br />
+          I used to work at McKinsey and Company. I went to Harvard College and Harvard Law School. I am licensed in Florida.
+          
         </div>
-        <div>
-          <h2>What will happen to the Constitution?</h2>
 
-          ConstitutionDAO is seeking an esteemed partner to publicly display the
-          Constitution. The eventual home must have the expertise to properly
-          house, store, and maintain the artifact. Additionally, the community
-          has expressed strong preferences for institutions that are free to the
-          public and willing to cover the costs associated with housing the
-          document.
-        </div>
-        <div>
-          <h2>Why is it a DAO?</h2>
-          Decentralization and cryptocurrency (web3) have created structures
-          that allow people to self-govern with unparalleled levels of autonomy
-          and freedom. It’s fitting that we use this technology to honor and
-          protect the greatest historical tool for human governance: the U.S.
-          Constitution.
-        </div>
-        <div>
-          <h2>Where are the funds from the Juicebox going to be stored?</h2>
-          We are using a
-          <a target="_blank" href="https://gnosis-safe.io/">Gnosis Safe</a>
-          wallet that has 13 signers.
-          <a
-            href="https://twitter.com/ConstitutionDAO/status/1460435158075682816"
-            >The identities of the signers can be viewed here.</a
-          >
-          This multisig is only going to be used to submit the funds to
-          Sotheby’s, or return the funds to Juicebox for refunds should we lose.
-        </div>
         <div>
           <h2>
-            Will the core team receive any of the raised funds for themselves or
-            get compensated in any way from this?
+            I like to support startups
           </h2>
-          The core team has not received or pre-minted any tokens. Following the
-          purchase of the Constitution, we intend to submit a proposal to be
-          voted on by the community. While this is unusual, we believe that it
-          establishes a precedence of mutual trust between the core team and the
-          backers of the ConstitutionDAO.
+          I have mentored and otherwise supported several founders and startups. I am also a Board Member of the Richard Branson Centre of Entrepreneurship Caribbean.        
+        </div>
+
+        <div>
+          <h2>I may like Web3</h2>
+         Interested in Blockchain and what can be built on it. Metaverse/NFT/Dao stuff as well. I am an $ENS delegate. I have spent time deploying smart contracts and programs on Solana and Ethereum testnets.
+          <a target="_blank" href="https://buildspace.so/">Buildspace</a>
+          has great tutorials. Scroll down to see some examples of my Blockchain projects.
+          
+        </div>
+
+        <div>
+          <h2>I like Art</h2>
+
+          I like art shows and museums and the occasional piece of fine art. I own Paintings on different media, and Photographs. I also invest in physical art via platforms like Masterworks and NFTs on Ethereum, Solana and Polygon. I am a Board Member of National Museums Jamaica, a member of the Jamaica Arts Society, and an active member of the Perez Art Museum in Miami.
         </div>
         <div>
+          <h2>I like music</h2>
+          I was the head of the Black Music Department at Harvard's radio station for a few years and I used to DJ parties. Now I just listen.
+        </div>
+       
+        
+        <div>
           <h2>
-            Am I receiving ownership of the Constitution in exchange for my
-            donation?
+            I like the business of fashion
           </h2>
-          No. You are receiving a governance token, not fractionalized
-          ownership. Governance includes the ability to advise on (for
-          illustrative purposes) where the Constitution should be displayed, how
-          it should be exhibited, and the mission and values of ConstitutionDAO.
-          ConstitutionDAO is taking donations and donors are receiving
-          governance tokens with no expectation of profit. These donations are
-          not tax deductible at this point in time.
+          I used to be known as a good dresser. Now I just wear clothes. I do things like Complexcon and Hypefest and I wear the sneakers I collect. I used to work in the fashion buying and planning department at Macy's many years ago.
         </div>
       </div>
     </div>
 
     <div class="team">
       <div class="team-group">
-        <p>Core contributors</p>
+        <p>My Recent Writing</p>
         <div class="team-people">
           <div class="person">
             <div class="info">
-              <h1>Alice Ma</h1>
-              <p>New York, NY</p>
+              <h1>Essay about Coach Richard Williams</h1>
+              <p>2021</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/alicemama15"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
+              href="https://bit.ly/CoachRichardWilliams"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/medium1_jfdwtvU6V6g99q3G7gq7dQ.png"
+              /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Angelo</h1>
-              <p>New York, NY</p>
+              <h1>Essay about Quicksand and Racism in America</h1>
+              <p>2020</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/ngeloxyz"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://markmcintosh.medium.com/that-sinking-feeling-trump-quicksand-and-racism-in-america-1a58c6d3a2e9"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/medium1_jfdwtvU6V6g99q3G7gq7dQ.png"
             /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Austin Cain</h1>
-              <p>Atlanta, GA</p>
+              <h1>Essay about Passion</h1>
+              <p>2018</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/j_austincain"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://markmcintosh.medium.com/startup-standouts-integrity-intelligence-and-passion-52f01b31997b"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/medium1_jfdwtvU6V6g99q3G7gq7dQ.png"
             /></a>
           </div>
 
-          <div class="person">
-            <div class="info">
-              <h1>Brian Wagner</h1>
-              <p>Brooklyn, NY</p>
-            </div>
-            <a class="twitter" target="_blank" href="https://twitter.com/bhwags"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
 
-          <div class="person">
-            <div class="info">
-              <h1>Jusung Lee</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/0xJuicero"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Conner Swenberg</h1>
-              <p>USA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/cswenberg_"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Daniel</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/sadlyoddisfying"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Erik Van Winkle</h1>
-              <p>Atlanta, GA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/erik_vanwinkle"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Graham Novak</h1>
-              <p>Atlanta, GA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/gnovak_"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Ian Dilick</h1>
-              <p>Chicago, IL</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/imdilick"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Ittai Svidler</h1>
-              <p>Chicago, IL</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/IttaiSvidler"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>James Robinson</h1>
-              <p>The Internet</p>
-            </div>
-            <a class="twitter" target="_blank" href=""
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Jon Hillis</h1>
-              <p>Austin, TX</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/JonathanHillis"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Kyle Billings</h1>
-              <p>Denver, CO</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/kyle_billings"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Lily Chang</h1>
-              <p>Berlin, Germany</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/slowgraffitii"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Liminal Warmth</h1>
-              <p>Los Angeles, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/liminal_warmth"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Mackenzie Burnett</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/ciaomack"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Mihir Patel</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/_mihirpatel"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Munam Wasi</h1>
-              <p>Manhattan Beach, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/MunamWasi"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Nicole Ruiz</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/nwilliams030"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Packy McCormick</h1>
-              <p>New York, NY</p>
-            </div>
-            <a class="twitter" target="_blank" href="https://twitter.com/packyM"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Paddington</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/adriyoung"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Tina</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/patagucci_girl"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Theo Bleier</h1>
-              <p>Boston, MA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/theombl"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>David Silverman</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/davidesilverman"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Julian Weisser</h1>
-              <p>Sioux Falls, SD</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/julianweisser"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Will Papper</h1>
-              <p>San Francsico, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/WillPapper"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Anisha Sunkerneni</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/youfoundanisha"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Jonah Erlich</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/jierlich"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Ghost</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/ghosttyped"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Sabrina Hahn</h1>
-              <p>New York, NY</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/sabrinahahn"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Endaoment</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/endaomentdotorg"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Robbie Heeger</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/robbieheeger"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Carter Wilkinson</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/carterwilki"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
 
         </div>
       </div>
       <div class="team-group">
-        <p>Multisig</p>
+        <p>Links to my Socials and Other things</p>
         <div class="team-people">
           <div class="person">
             <div class="info">
-              <h1>Alice Ma</h1>
-              <p>San Francisco, CA</p>
+              <h1>Instagram</h1>
+              <p>My Insta page</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/alicemama15"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://instagram.com/markmcintosh01"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/Instagram glyph-logo_May2016-310x310.png"
             /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Brian Wagner</h1>
-              <p>Brooklyn, NY</p>
+              <h1>Twitter</h1>
+              <p>My Twitter page</p>
             </div>
-            <a class="twitter" target="_blank" href="https://twitter.com/bhwags"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+            <a class="twitter" target="_blank" href="https://twitter.com/markmcintosh01"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/Twitter_Logo_Blue-310x310.png"
             /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Cooper Turley</h1>
-              <p>Los Angeles, CA</p>
+              <h1>Linkedin</h1>
+              <p>My Linkedin page</p>
+            </div>
+            <a class="twitter" target="_blank" href="https://linkedin.com/in/markemcintosh"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/linkedIn_PNG39.png"
+            /></a>
+          </div>
+
+
+          <div class="person">
+            <div class="info">
+              <h1>Medium</h1>
+              <p>My essays all in one place</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/Cooopahtroopa"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://markmcintosh.medium.com"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/medium1_jfdwtvU6V6g99q3G7gq7dQ.png"
             /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Graeme Boy</h1>
-              <p>New York, NY</p>
+              <h1>Mirrox.xyz</h1>
+              <p>Reflection Eternal on Mirror</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/strangechances"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://mirror.xyz/0x33398E0a3e38f4e8ed57d5aa56bBc6241cFc8Ec3"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/surface.png"
             /></a>
           </div>
 
           <div class="person">
             <div class="info">
-              <h1>Graham Novak</h1>
-              <p>The Internet</p>
+              <h1>Opensea</h1>
+              <p>My NFTs</p>
             </div>
             <a
               class="twitter"
               target="_blank"
-              href="https://twitter.com/gnovak_"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
+              href="https://opensea.io/blockedchain"
+              ><img width="40" height="40" src="/assets/images/SocialMedia/OpenSea-Full-Logo (dark) - thumb.png"
             /></a>
           </div>
 
-          <div class="person">
-            <div class="info">
-              <h1>Jango</h1>
-              <p>The Internet</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/me_jango"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Jonathan Hillis</h1>
-              <p>Austin, TX</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/jonathanhillis"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Julian Weisser</h1>
-              <p>Sioux Falls, SD</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/julianweisser"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Lauren</h1>
-              <p>The Internet</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/wowbestie"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Miguel Piedrafita</h1>
-              <p>Spain</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/m1guelpf"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Tina</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/patagucci_girl"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-
-          <div class="person">
-            <div class="info">
-              <h1>Will Papper</h1>
-              <p>San Francisco, CA</p>
-            </div>
-            <a
-              class="twitter"
-              target="_blank"
-              href="https://twitter.com/WillPapper"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-          <div class="person">
-            <div class="info">
-              <h1>Dame</h1>
-              <p>South Carolina, USA</p>
-            </div>
-            <a class="twitter"
-              ><img width="40" height="40" src="/assets/images/twitter.png"
-            /></a>
-          </div>
-        </div>
-      </div>
+          
     </div>
 
+  </div>
+
+<div class="team-group">
+  <p>Links to my Blockchain Projects</p>
+  <div class="team-people">
+    <div class="person">
+      <div class="info">
+        <h1>On-chain turn by turn game - Ethereum</h1>
+        <p>Requires Metamask Wallet (Ethereum Testnet)</p>
+      </div>
+      <a
+        class="twitter"
+        target="_blank"
+        href="https://nft-turn-game-eth.vercel.app/"
+        ><img width="40" height="40" src="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
+      /></a>
+    </div>
+
+    <div class="person">
+      <div class="info">
+        <h1>On Chain Photo Album - Solana</h1>
+        <p>Requires Phantom Wallet (Solana Devnet)</p>
+      </div>
+      <a class="twitter" target="_blank" href="https://solana-photos.vercel.app/"
+        ><img width="40" height="40" src="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
+      /></a>
+    </div>
+
+    <div class="person">
+      <div class="info">
+        <h1>Random Order NFT Generator - Ethereum</h1>
+        <p>Requires Metamask Wallet (Ethereum Testnet)</p>
+      </div>
+      <a class="twitter" target="_blank" href="https://nft-namecombos.vercel.app/"
+        ><img width="40" height="40" src="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
+      /></a>
+    </div>
+
+    <div class="person">
+      <div class="info">
+        <h1>NFT Collection Generator - Solana</h1>
+        <p>Requires Phantom Wallet (Solana Devnet)</p>
+      </div>
+      <a class="twitter" target="_blank" href="https://solana-nftd-rop.vercel.app/"
+        ><img width="40" height="40" src="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
+      /></a>
+    </div>
+    
+     <div class="person">
+      <div class="info">
+        <h1>DAO with voting on Ethereum</h1>
+        <p>Requires Metamask Wallet (Ethereum Rinkeby Testnet)</p>
+      </div>
+      <a class="twitter" target="_blank" href="https://buythe-block-dao.vercel.app/"
+        ><img width="40" height="40" src="https://cloudflare-ipfs.com/ipfs/QmS5c3DgZVCi2SvXGFA1FpCVk9oX3fraDnhUSu9geFHieu"
+      /></a>
+    </div>
+
+   </div>
+  </div>
+<!-- Youtube Video Embed 
     <div class="center">
       <div class="video">
-        <iframe
-          src="https://player.vimeo.com/video/645896995?h=88ee0f383b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          frameborder="0"
-          width="100%"
-          height="100%"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="ConstitutionDAO Contribution Guide.mp4"
-        ></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4SVfnTPOsBc" 
+        title="YouTube video player" 
+        frameborder="0"
+        width="100%"
+          height="100%" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+ -->
 
+ <div class="center">
       <div class="links footer">
+      
         <div class="button-row">
           <a
             class="cta-link main-cta"
+            
             target="_blank"
             rel="noreferrer"
-            href="https://juicebox.money/#/p/constitutiondao"
-            >MAKE A CONTRIBUTION</a
+            href="/index.html"
+            >Do Not Click Here</a
           >
+         <br>
         </div>
       </div>
     </div>
+    <div class="center">
+    <b>I built this website with help from Stack Overflow and clicking Inspect on pages that I like. Open source for the win!</b>
+    <br>
+    <b>Thanks for stopping by!</b>
+</div>
+
   </body>
 </html>
